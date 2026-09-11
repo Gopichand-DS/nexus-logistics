@@ -1,0 +1,6 @@
+{
+  "name": "Nexus Logistics",
+  "description": "Guaranteed, accountable first-mile outbound logistics platform featuring Control Tower dispatch, real-time yard & dock management, and driver e-POP execution.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
