@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --bg-surface: #0B1326;
+  --bg-surface-low: #101B35;
+  --bg-surface-container: #162444;
+  --bg-surface-high: #1E3059;
+  --primary: #F59E0B;
+  --primary-hover: #D97706;
+  --primary-light: rgba(245, 158, 11, 0.15);
+  --secondary: #4CD7F6;
+  --secondary-light: rgba(76, 215, 246, 0.15);
+  --tertiary: #51E77B;
+  --tertiary-light: rgba(81, 231, 123, 0.15);
+  --error: #FF5449;
+  --error-light: rgba(255, 84, 73, 0.15);
+  --border: #2A3B66;
+  --border-subtle: #1C2B4E;
+  --text: #E0E6F8;
+  --text-muted: #8E9BB5;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-surface);
+  color: var(--text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Tactical glowing pulse animations */
+@keyframes beaconPulse {
+  0% { transform: scale(0.95); opacity: 0.8; box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.6); }
+  70% { transform: scale(1.05); opacity: 1; box-shadow: 0 0 0 15px rgba(245, 158, 11, 0); }
+  100% { transform: scale(0.95); opacity: 0.8; box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+
+.animate-beacon {
+  animation: beaconPulse 2.5s infinite ease-in-out;
+}
+
+@keyframes laserScan {
+  0% { top: 10%; opacity: 0.3; }
+  50% { top: 85%; opacity: 1; }
+  100% { top: 10%; opacity: 0.3; }
+}
+
+.animate-laser {
+  animation: laserScan 2s infinite ease-in-out;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-surface-low);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
